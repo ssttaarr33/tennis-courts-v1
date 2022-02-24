@@ -1,5 +1,7 @@
 package com.tenniscourts.reservations;
 
+import io.swagger.annotations.ApiModelProperty;
+import java.time.LocalDateTime;
 import javax.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -8,14 +10,14 @@ import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 @Data
-public class CreateReservationRequestDTO {
+@Builder
+public class ReservationFilterDTO {
 
     @NotNull
-    private Long guestId;
+    @ApiModelProperty(required = true)
+    private LocalDateTime startDate;
 
-    @NotNull
-    private Long scheduleId;
+    private LocalDateTime endDate;
 
 }

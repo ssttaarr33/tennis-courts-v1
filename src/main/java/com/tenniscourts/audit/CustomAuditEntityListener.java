@@ -1,13 +1,12 @@
 package com.tenniscourts.audit;
 
 import com.tenniscourts.config.persistence.BaseEntity;
-
-import javax.persistence.PrePersist;
-import javax.persistence.PreUpdate;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.time.LocalDateTime;
 import java.util.Objects;
+import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
 
 public class CustomAuditEntityListener {
 
